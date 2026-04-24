@@ -1,0 +1,538 @@
+@charset "utf-8";
+
+/*全体の指定*/
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 2;
+	font-size: 15px;
+	scroll-behavior: smooth;
+}
+
+/*スクロール時の余白*/
+.scroll-margin{
+	scroll-margin-top: 55px;
+}
+
+/*コンテンツ幅・フォントの指定*/
+main{
+	max-width: 1020px;
+	width: 90%;
+	margin: 0 auto;
+	color: #333;
+}
+
+/*フォントの指定*/
+body{
+	font-family: '小塚明朝 Pr6N',serif;
+	min-width: 1020px;/*念のため・・・*/
+}
+
+/*------------ヒーローエリア開始--------------*/
+/*ヘッダーのバックグラウンド(基準ボックス)*/
+.background{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 0;
+	background-position: center;
+	margin-bottom: 20px;
+}
+
+/*ロゴ*/
+.logo{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 5;
+}
+
+/*キャッチコピー*/
+.catch{
+	color: rgba(204, 204, 204, 0.8);
+	font-size: 18.7px;
+	letter-spacing: 0.15em;
+	line-height: 2.5;
+	font-family: 游明朝,serif;
+	font-weight: 300;
+	position: absolute;
+	right: 40px;
+	bottom: 30px;
+	z-index: 5;
+}
+/*
+/*グローバルナビ（相対配置）*/
+.global-nav{  
+position: absolute;  
+top: 24px;  
+right: 32px;  
+z-index: 10;
+}  
+
+/*グローバルナビ(点を消す)*/
+.global-nav ul{
+	list-style: none;
+}
+
+/*グローバルナビ　display：flex; gap:16px;の代用*/
+.global-nav li{
+	float: left;
+	margin-right: 40px;
+}
+
+/*カラム落ち防止*/
+.global-nav li:nth-child(7n){
+	margin-right: 0;
+}
+
+/*グローバルナビ（ホバー等）*/
+.global-nav a{
+	color: #fff;
+	letter-spacing: 0.05em;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.global-nav a:hover{
+	color: #a09c9f;
+}
+
+/*インスタのロゴ*/
+.Instagram{
+	width: 20px;
+	height: auto;
+	color: #fff;
+	transition: all 0.3s ease;
+}
+
+.Instagram:hover{
+	color: #a09c9f;
+}
+/*------------ヒーローエリア終了--------------*/
+
+/*------------section1開始--------------*/
+/*リード文*/
+.lead{
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+
+/*縦書きの見出し(共通)*/
+.vartical{
+	writing-mode: vertical-rl;
+	font-size: 37px;
+}
+
+/*縦線の位置(個別に設定)*/
+.headline1{
+	position: relative;
+	left: 85px;
+}
+
+/*縦線の見た目(個別に設定)*/
+.headline1::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	width: 0.5px;
+	height: 220px;
+	background-color: #333;
+}
+
+/*説明文の位置*/
+.section1-2{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 80px;
+}
+.description1{
+	position: absolute;
+	left: 30%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	line-height: 2.5;
+}
+
+/*パフェ画像の位置*/
+.parfait{
+	width: 425px;
+	position: absolute;
+	top: -3%;
+	left: 50%;}
+
+/*menuの親要素*/
+.section1-1{
+	scroll-margin-top: 55px;
+	position: relative;
+	padding-bottom: 31px;
+	margin-bottom: 100px;
+}
+
+/*menu見た目・中央揃え*/
+.menu{
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-decoration: none;
+	padding: 10px 90px;
+	border: solid 1px #333;
+	border-radius: 42px;
+	color: #333;
+	font-size: 21px;
+	letter-spacing: 0.1em;
+	transition: all 0.3s ease;
+}
+
+/*menuホバー時の動作*/
+.menu:hover{
+	color: #fff;
+	background-color: #222;
+	border: solid 1px #222;
+}
+/*------------section1終了--------------*/
+
+/*------------section2開始--------------*/
+/*見出し位置調整*/
+.headline2{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	padding-bottom: 82px;
+	margin-bottom: 25px;
+}
+
+/*縦線の見た目(個別に設定)*/
+.headline2::after{
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 160px;
+	width: 0.5px;
+	height: 70px;/*疑似要素は高さ認識されない*/
+	background-color: #333;
+}
+
+/*テキスト中央揃え*/
+.section2-1{
+	text-align: center;
+}
+
+/*月別予約状況の画像*/
+.reservation{
+	width: 800px;
+	height: auto;
+	margin-bottom: 20px;
+	vertical-align: bottom;/*imgはインライン要素、ベースライン分の余白が生まれる→消去*/
+}
+
+.description2{
+	margin-bottom: 20px;
+}
+
+/*.online見た目・中央揃え*/
+.online{
+	text-align: center;
+	text-decoration: none;
+	padding: 15px 50px;
+	border: solid 1px #222;
+	border-radius: 42px;
+	color: #fff;
+	background-color: #222;
+	font-size: 20px;
+	letter-spacing: 0.05em;
+	transition: all 0.3s ease;
+}
+
+/*.onlineホバー時の動作*/
+.online:hover{
+	color: #333;
+	background-color: #fff;
+	border: solid 1px #333;
+}
+
+/*電話予約*/
+.tel{
+	font-size: 26px;
+	margin-top: 15px;
+	margin-bottom: 103px;
+}
+/*------------section2終了--------------*/
+
+/*------------section3開始--------------*/
+/*全体の基準ボックス*/
+.section3-1{
+	position: relative;
+	height: 559px; /*デメリット：可変に弱い　理由：description3とimg双方にposition: absolute;*/
+	margin-bottom: 120px;
+}
+
+/*section3の子として*/
+.headline3-1{
+	position: absolute;
+	right: 85px;
+}
+
+/*縦線の基準ボックス*/
+.headline3-2{
+	position: relative;
+}
+
+/*縦線の見た目(個別に設定)*/
+.headline3-2::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	width: 0.5px;
+	height: 180px;
+	background-color: #333;
+}
+
+/*説明文の位置*/
+.description3{
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(0%, -50%);
+	line-height: 2.5;
+}
+
+/*パフェ画像の位置*/
+.fruit{
+	position: absolute;
+	left: 85px;
+	top:15%;
+	}
+
+
+/*------------section3終了--------------*/
+
+/*------------section4開始--------------*/
+.headline4{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	padding-bottom: 82px;
+	margin-bottom: 25px;
+}
+
+/*縦線の見た目(個別に設定)*/
+.headline4::after{
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 160px;
+	width: 0.5px;
+	height: 70px;/*疑似要素は高さ認識されない*/
+	background-color: #333;
+}
+
+/*テキスト中央揃え*/
+.section4-2{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/*mapの色味変更*/
+.map{
+	filter: grayscale(100%);
+	width: 850px;
+	height: 362px;
+}
+
+/*駐車場写真の調整*/
+.parking{
+	width: 425px;
+}
+
+/*駐車場案内基準ボックス*/
+.description4-2{
+	width: 425px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	margin-bottom: 100px;
+	padding-bottom: 10px;
+	border-bottom: solid 0.5px #333;
+}
+
+.subheadline4{
+	font-size: 23px;
+	position: relative;
+	display: inline-block;
+	padding-right: 10px;
+}
+
+.subheadline4::after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	width: 254px;
+	height: 0.5px;
+	background-color: #333;
+}
+/*------------section4終了--------------*/
+
+/*------------footer開始--------------*/
+/*風景*/
+.landscape{
+	width: 100%;
+	height: 60vh;
+	content: "";
+	background-image: url(../img/landscape.jpg);
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+	background-repeat: no-repeat;
+}
+
+/*はみ出し余白*/
+footer{
+	padding-top: 80px;
+}
+
+/*半円*/
+.footer-deco{
+	position: absolute;
+	transform: translate(-50%, 0%);
+	top: -35px;
+	left: 50%;
+	width: 500px;
+	height: 250px;
+	background-color: #222;
+	border-radius: 500px 500px 0 0;
+	z-index: 1;
+
+}
+
+/*フッダー*/
+.footer-box{
+	position: relative;
+	height: 30vh;
+	background-color: #222;
+	z-index: 1;
+}
+
+/*矢印アイコン*/
+.arrow{
+	z-index: 20;
+	width: 30px;
+	height: auto;
+	color: #fff;
+	transition: all 0.3s ease;
+ 	position: relative;
+ 	left: 50%;
+ 	top: -25px;
+	transform: translate(-50%, 0%);
+}
+
+.arrow:hover{
+	color: #a09c9f;
+}
+
+/*ロゴ*/
+.logo{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 5;
+}
+
+/*info*/
+.info{
+	color: #fffffe;
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	position: absolute;
+	left: 1%;
+	bottom: 2%;
+	z-index: 5;
+}
+
+dd,dt{
+	display: inline;
+}
+
+.mailto{
+	color: inherit;
+	text-decoration: none;
+}
+.mailto:hover{
+ opacity: 0.8;
+}
+
+/*コピーライト*/
+.Copyrights{
+	position: absolute;
+	right: 2%;
+	bottom: 2%;
+	font-size: 11px;
+	font-family: '小塚ゴシック Pr6N',sans-serif;
+	color: #FFFFFE;
+	z-index: 5;
+}
+
+/*フッダーナビ*/
+.footer-nav{
+	position: absolute;  
+	bottom: 12%;  
+	right: 2%;  
+	z-index: 5;
+}  
+
+/*フッダーナビ(点を消す)*/
+.footer-nav ul{
+	list-style: none;
+}
+
+/*フッダーナビ　display：flex; gap:16px;の代用*/
+.footer-nav li{
+	float: left;
+	margin-right: 40px;
+}
+
+/*カラム落ち防止*/
+.footer-nav li:nth-child(2n){
+	margin-right: 0;
+}
+
+/*フッダーナビ（ホバー等）*/
+.footer-nav a{
+	color: #fff;
+	letter-spacing: 0.05em;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.footer-nav a:hover{
+	color: #a09c9f;
+}
+
+/*インスタのロゴ*/
+.Instagram2{
+	width: 20px;
+	height: auto;
+	color: #fff;
+	transition: all 0.3s ease;
+}
+
+.Instagram2:hover{
+	color: #a09c9f;
+}
+
+.Instagram2{
+	position: absolute;
+	left: 50%;
+	bottom: 2%;
+	transform: translate(-50%,-50%);
+	z-index: 5;
+}
